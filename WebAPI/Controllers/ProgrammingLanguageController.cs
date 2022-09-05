@@ -1,4 +1,5 @@
 ﻿using Application.Features.ProgrammingLanguages.Commands.CreateProgrammingLanguage;
+using Application.Features.ProgrammingLanguages.Queries.GetListProgrammingLanguage;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -12,6 +13,12 @@ namespace WebAPI.Controllers
         {
             var result = await Mediator.Send(createProgrammingLanguageCommand);
             return Created("Created", result);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Add([FromQuery]GetListProgrammingLanguageQuery getListProgrammingLanguageQuery)
+        {
+            var result = await Mediator.Send(getListProgrammingLanguageQuery);
+            return Ok(result);
         }
     }
 }

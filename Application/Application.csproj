@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="Features\ProgrammingLanguages\Queries\GetByIdProgrammingLanguage\" />
-    <Folder Include="Features\ProgrammingLanguages\Queries\GetListProgrammingLanguage\" />
   </ItemGroup>
 
   <ItemGroup>
