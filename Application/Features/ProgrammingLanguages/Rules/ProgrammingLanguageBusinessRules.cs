@@ -21,7 +21,7 @@ namespace Application.Features.ProgrammingLanguages.Rules
         public async Task ProgrammingLanguageNameCanNotDublicatedWhenInsertedAsync(string name)
         {
             ProgrammingLanguage result = await _programmingLanguageRepository.GetAsync(p => p.Name == name);
-            if (result == null) throw new BusinessException("Language name exist.");
+            if (result != null) throw new BusinessException("Language name exist.");
         }
     }
 }
