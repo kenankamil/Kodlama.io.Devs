@@ -18,5 +18,11 @@ namespace Application.Features.ProgrammingLanguages.Rules
             ProgrammingLanguage result = await _programmingLanguageRepository.GetAsync(p => p.Name == name);
             if (result != null) throw new BusinessException("Language name exist.");
         }
+
+        public async Task ProgrammingLanguageShouldExist(int id)
+        {
+            ProgrammingLanguage result = await _programmingLanguageRepository.GetAsync(p => p.Id == id);
+            if (result == null) throw new BusinessException("Language does not exist.");
+        }
     }
 }

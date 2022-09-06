@@ -16,7 +16,6 @@ namespace Application.Features.ProgrammingLanguages.Queries.GetListProgrammingLa
 {
     public class GetListProgrammingLanguageQuery : IRequest<ProgrammingLanguageListModel>
     {
-
         public PageRequest PageRequest { get; set; }
         public class GetListProgrammingLanguageQueryHandler : IRequestHandler<GetListProgrammingLanguageQuery, ProgrammingLanguageListModel>
         {
