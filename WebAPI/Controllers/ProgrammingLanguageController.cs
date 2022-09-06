@@ -1,4 +1,5 @@
 ﻿using Application.Features.ProgrammingLanguages.Commands.CreateProgrammingLanguage;
+using Application.Features.ProgrammingLanguages.Commands.DeleteProgrammingLanguage;
 using Application.Features.ProgrammingLanguages.Queries.GetByIdProgrammingLanguage;
 using Application.Features.ProgrammingLanguages.Queries.GetListProgrammingLanguage;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,13 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> ById([FromRoute] GetByIdProgrammingLanguageQuery getByIdProgrammingLanguageQuery)
         {
             var result = await Mediator.Send(getByIdProgrammingLanguageQuery);
+            return Ok(result);
+        }
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> Delete([FromRoute] DeleteProgrammingLanguageCommand deleteProgrammingLanguageCommand)
+        {
+            var result = await Mediator.Send(deleteProgrammingLanguageCommand);
             return Ok(result);
         }
     }
