@@ -9,7 +9,7 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProgrammingLanguageController : BaseController
+    public class ProgrammingLanguagesController : BaseController
     {
         [HttpPost]
         public async Task<IActionResult> Add(CreateProgrammingLanguageCommand createProgrammingLanguageCommand)
@@ -39,7 +39,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Delete(UpdateProgrammingLanguageCommand updateProgrammingLanguageCommand)
+        public async Task<IActionResult> Update(UpdateProgrammingLanguageCommand updateProgrammingLanguageCommand)
         {
             var result = await Mediator.Send(updateProgrammingLanguageCommand);
             return Ok(result);

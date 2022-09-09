@@ -3,7 +3,7 @@ using Domain;
 
 namespace Application.Services.Repositories
 {
-    public interface IProgrammingLanguageRepository : IAsyncRepository<ProgrammingLanguage>, IRepository<ProgrammingLanguage>
+    public interface ITechnologyRepository : IAsyncRepository<Technology>, IRepository<Technology>
     {
     }
 }

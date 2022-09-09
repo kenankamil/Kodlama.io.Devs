@@ -7,6 +7,7 @@ namespace Persistence.Contexts
     public class BaseDbContext : DbContext
     {
         public DbSet<ProgrammingLanguage> ProgrammingLanguageEntitites { get; set; }
+        public DbSet<Technology> Technologies { get; set; }
         protected IConfiguration Configuration { get; set; }
 
         public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions)
