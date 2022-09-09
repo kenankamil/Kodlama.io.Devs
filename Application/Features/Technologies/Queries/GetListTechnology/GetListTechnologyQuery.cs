@@ -1,6 +1,4 @@
-﻿using Application.Features.ProgrammingLanguages.Queries.GetListProgrammingLanguage;
-using Application.Features.Technologies.Dtos;
-using Application.Features.Technologies.Models;
+﻿using Application.Features.Technologies.Models;
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Application.Requests;
@@ -8,11 +6,6 @@ using Core.Persistence.Paging;
 using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Features.Technologies.Queries.GetListTechnology
 {

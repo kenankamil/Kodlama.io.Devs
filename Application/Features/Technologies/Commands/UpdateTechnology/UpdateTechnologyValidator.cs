@@ -1,5 +1,4 @@
-﻿using Application.Features.Technologies.Commands.CreateTechnology;
-using Application.Features.Technologies.Commands.UpdateTechnology;
+﻿using Application.Features.Technologies.Commands.UpdateTechnology;
 using FluentValidation;
 
 namespace Application.Features.Technologies.Commands.CreateTechnology
