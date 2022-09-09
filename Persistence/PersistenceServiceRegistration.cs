@@ -15,6 +15,7 @@ namespace Persistence
                 configuration.GetConnectionString("ProgrammingLanguageConnectionString")));
 
             services.AddScoped<IProgrammingLanguageRepository, ProgrammingLanguageRepository>();
+            services.AddScoped<ITechnologyRepository, TechnologyRepository>();
 
             return services;
         }

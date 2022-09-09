@@ -9,7 +9,7 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProgrammingLanguageController : BaseController
+    public class ProgrammingLanguagesController : BaseController
     {
         [HttpPost]
         public async Task<IActionResult> Add(CreateProgrammingLanguageCommand createProgrammingLanguageCommand)
