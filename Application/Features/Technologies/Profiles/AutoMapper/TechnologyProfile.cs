@@ -21,7 +21,7 @@ namespace Application.Features.Technologies.Profiles.AutoMapper
             CreateMap<Technology, TechnologyListModel>().ReverseMap();
             CreateMap<TechnologyListModel, IPaginate<Technology>>().ReverseMap();
 
-            //CreateMap<Technology, DeleteProgrammingLanguageCommand>().ReverseMap();
+            CreateMap<Technology, DeleteTechnologyDto>().ReverseMap();
             //CreateMap<Technology, DeleteProgrammingLanguageDto>().ReverseMap();
 
             CreateMap<Technology, UpdateTechnologyDto>().ReverseMap();

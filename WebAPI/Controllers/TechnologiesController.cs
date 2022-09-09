@@ -1,5 +1,6 @@
 ﻿using Application.Features.ProgrammingLanguages.Commands.UpdateProgrammingLanguage;
 using Application.Features.Technologies.Commands.CreateTechnology;
+using Application.Features.Technologies.Commands.DeleteTechnology;
 using Application.Features.Technologies.Commands.UpdateTechnology;
 using Application.Features.Technologies.Queries.GetListTechnology;
 using Core.Application.Requests;
@@ -30,6 +31,13 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> Update(UpdateTechnologyCommand updateTechnologyCommand)
         {
             var result = await Mediator.Send(updateTechnologyCommand);
+            return Ok(result);
+        }
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> Delete([FromRoute] DeleteTechnologyCommand deleteTechnologyCommand)
+        {
+            var result = await Mediator.Send(deleteTechnologyCommand);
             return Ok(result);
         }
     }
