@@ -1,4 +1,6 @@
 ﻿using Application.Features.Technologies.Commands.CreateTechnology;
+using Application.Features.Technologies.Queries.GetListTechnology;
+using Core.Application.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -14,5 +16,12 @@ namespace WebAPI.Controllers
             return Created("Created", result);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> List([FromQuery]PageRequest pageRequest)
+        {
+            GetListTechnologyQuery getListTechnologyQuery = new GetListTechnologyQuery{ PageRequest = pageRequest};
+            var result = await Mediator.Send(getListTechnologyQuery);
+            return Ok(result);
+        }
     }
 }
