@@ -1,4 +1,5 @@
 ﻿using Application.Features.Technologies.Commands.CreateTechnology;
+using Application.Features.Technologies.Commands.UpdateTechnology;
 using Application.Features.Technologies.Dtos;
 using Application.Features.Technologies.Models;
 using AutoMapper;
@@ -23,8 +24,8 @@ namespace Application.Features.Technologies.Profiles.AutoMapper
             //CreateMap<Technology, DeleteProgrammingLanguageCommand>().ReverseMap();
             //CreateMap<Technology, DeleteProgrammingLanguageDto>().ReverseMap();
 
-            //CreateMap<Technology, UpdateProgrammingLanguageCommand>().ReverseMap();
-            //CreateMap<Technology, UpdateProgrammingLanguageDto>().ReverseMap();
+            CreateMap<Technology, UpdateTechnologyDto>().ReverseMap();
+            CreateMap<Technology, UpdateTechnologyCommand>().ReverseMap();
 
         }
     }
